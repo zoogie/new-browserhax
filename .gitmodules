@@ -1,0 +1,4 @@
+[submodule "3ds_browserhax_common"]
+	path = 3ds_browserhax_common
+	url = https://github.com/zoogie/3ds_browserhax_common.git
+	branch = master
