@@ -13,8 +13,8 @@ This is a new homebrew menu loading userland exploit for the new3ds browser, Ska
 
 A new3ds (or new2ds) on firmwares:<br>
 ```
-11.9.0-42 -> 11.13.0-45 for USA or JAPAN<br>
-11.10.0-43 -> 11.13.0-45 for EUROPE<br>
+11.9.0-42 -> 11.13.0-45 for USA or JAPAN
+11.10.0-43 -> 11.13.0-45 for EUROPE
 ```
 Note: The last number on the firmware version matters. If you updated from a cartridge to your current firmware, you will need to update to latest firmware as your browser would have been erased by the cart update.
 
@@ -38,9 +38,9 @@ Solution: Try again. Boot rate is about 75-80%. This has always been an issue wi
 Solution: Make sure you have *all* the correct files. Check your region is correct.<br>
 At minimum, make sure to have those 3 files in those same locations.<br>
 ```
-sdmc:/arm11code.bin<br>
-sdmc:/browserhax_hblauncher_ropbin_payload.bin<br>
-sdmc:/boot.3dsx<br>
+sdmc:/arm11code.bin
+sdmc:/browserhax_hblauncher_ropbin_payload.bin
+sdmc:/boot.3dsx
 ```
 
 ## FAQ
