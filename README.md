@@ -45,7 +45,7 @@ sdmc:/boot.3dsx
 ```
 
 - Problem: I still can't get the exploit to work and the two solutions above didn't help.<br>
-Solution: Go to your browser's settings and select Delete Cookies first then Reset Save Data. After being exited automatically relaunch the browser and go to bookmarks. Create a bookmark with https://zoogie.github.io/web/nbhax as the address (or just edit an existing bookmark). Exit the browser, then launch it again and then launch that nbhax bookmark you just made.
+Solution: Go to your browser's settings and select Delete Cookies first then Reset Save Data. After being exited automatically, relaunch the browser and go to bookmarks. Create a bookmark with https://zoogie.github.io/web/nbhax as the address (or just edit an existing bookmark). Exit the browser, then launch it again, and then finally launch that nbhax bookmark you just made.
 
 ## FAQ
 Q: Will you support old3ds, old2ds?<br>
@@ -57,7 +57,7 @@ A: Absolutely, be my guest : ) You can boot slotTool.3dsx and install the hacked
 Q: Where did this browser exploit come from originally?<br>
 A: CVE-2013-2857 https://bugs.chromium.org/p/chromium/issues/detail?id=240124 . It was ported to the WiiU a couple of years ago and I think it's still the main userland entrypoint for that homebrew scene.
 
-Q: The 3ds_browserhax_common code you used works in php server code, why does your hax just use a github io page?
+Q: The 3ds_browserhax_common code you used works in php server code, why does your hax just use a github io page?<br>
 A: I used a local webserver to emit the unescape output of y8's hb loading code, then converted it to a u32int array for my implementation. I used [this script](https://gist.github.com/zoogie/42adb5eab6b7f813f569f5250f7c800f) for the conversion. I just really wanted to avoid having to set up a server or asking someone else for that favor.
 
 Q: Will this exploit be fixed in a firmware update?<br>
