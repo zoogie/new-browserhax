@@ -3,6 +3,7 @@
 ## Thanks 
 - Big thanks to @ChampionLeake for the bug tip!
 - The devs who developed JsTypeHax for the WiiU https://github.com/WiiUTest/JsTypeHax . This sploit is loosely modeled after it.
+- MrNbaYoh for the nice bit of [advice](https://mrnbayoh.github.io/blog/exploiting-the-3ds-browsers-p2/) to only use similar size objects to overwrite a freed object.
 - Yellows8 for the hbmenu loader code: https://github.com/yellows8/3ds_browserhax_common
 
 ## Intro
@@ -36,22 +37,28 @@ Solution: Try again. Boot rate is about 75-80%. This has always been an issue wi
 
 - Problem: The 3ds freezes on some other color screen or "An error has occured" prompt shows up.<br>
 Solution: Make sure you have *all* the correct files. Check your region is correct.<br>
-At minimum, make sure to have those 3 files in those same locations.<br>
+At minimum, make sure to have the below 3 files in the sd root as shown.<br>
 ```
 sdmc:/arm11code.bin
 sdmc:/browserhax_hblauncher_ropbin_payload.bin
 sdmc:/boot.3dsx
 ```
 
+- Problem: I still can't get the exploit to work and the two solutions above didn't help.<br>
+Solution: Go to your browser's settings and select Delete Cookies first then Reset Save Data. After being exited automatically relaunch the browser and go to bookmarks. Create a bookmark with https://zoogie.github.io/web/nbhax as the address (or just edit an existing bookmark). Exit the browser, then launch it again and then launch that nbhax bookmark you just made.
+
 ## FAQ
 Q: Will you support old3ds, old2ds?<br>
-A: I tried for a bit getting this to work but had no success. Can't even get the bug to crash old3ds. Might try again but the odds of old3ds support are slim at best.
+A: I tried for a bit getting this to work but had no success. Can't even get the bug to crash old3ds. I'm certainly not saying old3ds support is impossible, so go ahead and try yourself! :) It's open source. Let me know if you can at least get a crash and I might be able to do something with it.
 
 Q: Can I install [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE) with this to get cfw?<br>
 A: Absolutely, be my guest : ) You can boot slotTool.3dsx and install the hacked wifi slots, then run the unSAFE_MODE exploit. No explicit directions will be given for that here, but guides should pop up soon with directions.
 
 Q: Where did this browser exploit come from originally?<br>
 A: CVE-2013-2857 https://bugs.chromium.org/p/chromium/issues/detail?id=240124 . It was ported to the WiiU a couple of years ago and I think it's still the main userland entrypoint for that homebrew scene.
+
+Q: The 3ds_browserhax_common code you used works in php server code, why does your hax just use a github io page?
+A: I used a local webserver to emit the unescape output of y8's hb loading code, then converted it to a u32int array for my implementation. I used [this script](https://gist.github.com/zoogie/42adb5eab6b7f813f569f5250f7c800f) for the conversion. I just really wanted to avoid having to set up a server or asking someone else for that favor.
 
 Q: Will this exploit be fixed in a firmware update?<br>
 A: Don't know, but it's definitely possible. N has never fixed one of my exploits but they've always been proactive about fixing browser exploits. I give it 50/50 odds.
