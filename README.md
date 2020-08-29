@@ -24,7 +24,7 @@ Note: The last number on the firmware version matters. If you updated from a car
 1) In the release folder, find your region (USA, EUROPE, JAPAN) and take the two files *inside* that folder and put them on the root of your sd card. Do not copy the entire folder over.
 2) Place the homebrew launcher boot.3dsx from [here](https://github.com/fincs/new-hbmenu/releases/tag/v2.2.0) also on the root of your sd card.
 3) With wifi on and working, scan [this QR](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L) after pressing L+R should buttons together and tapping the QR button on the bottom screen. The link to the sploit page is https://zoogie.github.io/web/nbhax if you want to type it in manually and/or bookmark it.
-4) The exploit should then load homebrew menu. Make sure to add homebrews to the sdmc:/3ds folder first in order to have something to run. See other guides online about what you can do with homebrew.
+4) Click on the "PROCEED TO HAXX" button and the exploit should then load the homebrew menu. Make sure to add homebrews to the sdmc:/3ds folder first in order to have something to run. See other guides online about what you can do with homebrew.
 
 ## Exploit details
 
@@ -49,7 +49,7 @@ Solution: Go to your browser's settings and select Delete Cookies first then Res
 
 ## FAQ
 Q: Will you support old3ds, old2ds?<br>
-A: I tried for a bit getting this to work but had no success. Can't even get the bug to crash old3ds. I'm certainly not saying old3ds support is impossible, so go ahead and try yourself! :) It's open source. Let me know if you can at least get a crash and I might be able to do something with it.
+A: https://github.com/zoogie/old-browserhax
 
 Q: Can I install [unSAFE_MODE](https://github.com/zoogie/unSAFE_MODE) with this to get cfw?<br>
 A: Absolutely, be my guest : ) You can boot slotTool.3dsx and install the hacked wifi slots, then run the unSAFE_MODE exploit. No explicit directions will be given for that here, but guides should pop up soon with directions.
