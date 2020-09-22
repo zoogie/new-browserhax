@@ -34,7 +34,7 @@ This is the same Use-After-Free bug exploited in the WiiU version, with some cha
 ## Troubleshooting
 
 - Problem: The 3ds freezes on a yellow screen.<br>
-Solution: Try again. Boot rate is about 75-80%. This has always been an issue with *hax homebrew and not specific to this implementation.* This issue can also be caused by running browserhax while cfw is already installed -- don't do this! Follow https://3ds.hacks.guide for proper instructions on how to launch .3dsx homebrew under cfw. Freezing with regular screens (ie no solid colored screen) can also indicate running under cfw.
+Solution: Try again. Boot rate is about 75-80%. This has always been an issue with *hax homebrew and not specific to this implementation.* If this keeps occurring over and over, it's likely being caused by running browserhax while cfw (luma3ds + boot9strap) is already installed -- don't do this! Follow https://3ds.hacks.guide for proper instructions on how to launch .3dsx homebrew under cfw. Hard freezing with regular screens (ie no solid colored screen) can also indicate running under cfw.
 
 - Problem: The 3ds freezes on some other color screen or "An error has occured" prompt shows up.<br>
 Solution: Make sure you have *all* the correct files. Check your region is correct.<br>
