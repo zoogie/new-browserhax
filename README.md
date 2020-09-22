@@ -34,7 +34,7 @@ This is the same Use-After-Free bug exploited in the WiiU version, with some cha
 ## Troubleshooting
 
 - Problem: The 3ds freezes on a yellow screen.<br>
-Solution: Try again. Boot rate is about 75-80%. This has always been an issue with *hax homebrew and not specific to this implementation.
+Solution: Try again. Boot rate is about 75-80%. This has always been an issue with *hax homebrew and not specific to this implementation.* This issue can also be caused by running browserhax while cfw is already installed -- don't do this! Follow https://3ds.hacks.guide for proper instructions on how to launch .3dsx homebrew under cfw. Freezing with regular screens (ie no solid colored screen) can also indicate running under cfw.
 
 - Problem: The 3ds freezes on some other color screen or "An error has occured" prompt shows up.<br>
 Solution: Make sure you have *all* the correct files. Check your region is correct.<br>
@@ -46,7 +46,7 @@ sdmc:/boot.3dsx
 ```
 
 - Problem: I still can't get the exploit to work and the two solutions above didn't help.<br>
-Solution: Go to your browser's settings and select Delete Cookies first then Reset Save Data. After being exited automatically, relaunch the browser and go to bookmarks. Create a bookmark with https://zoogie.github.io/web/nbhax as the address (or just edit an existing bookmark). Exit the browser, then launch it again, and then finally launch that nbhax bookmark you just made.
+Solution: Go to your browser's settings and select Delete Cookies first then Reset Save Data. After being exited automatically, relaunch the browser and go to bookmarks. Create a bookmark with https://zoogie.github.io/web/nbhax as the address (or just edit an existing bookmark). Exit the browser, then launch it again, and then finally launch that nbhax bookmark you just made. It may also be helpful to power cycle the 3ds in between attempts if the exploit is still being stubborn.
 
 ## FAQ
 Q: Will you support old3ds, old2ds?<br>
