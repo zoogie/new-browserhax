@@ -1,5 +1,7 @@
 # new-browserhax
 
+# This Exploit has been patched on 11.14.0-46, will no longer work on any firmware
+
 ## Thanks 
 - Big thanks to @ChampionLeake for the bug tip!
 - The devs who developed JsTypeHax for the WiiU https://github.com/WiiUTest/JsTypeHax . This sploit is loosely modeled after it.
