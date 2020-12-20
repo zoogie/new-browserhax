@@ -1,11 +1,11 @@
 # new-browserhax
 
-# This Exploit has been patched on 11.14.0-46, will no longer work on any firmware
+# UPDATE: While this Exploit has been patched on 11.14.0-46, you can now use it on select older firmwares if you use a custom dns. Details below.
 
 ## Thanks 
 - Big thanks to @ChampionLeake for the bug tip!
 - The devs who developed JsTypeHax for the WiiU https://github.com/WiiUTest/JsTypeHax . This sploit is loosely modeled after it.
-- MrNbaYoh for the nice bit of [advice](https://mrnbayoh.github.io/blog/exploiting-the-3ds-browsers-p2/) to only use similar size objects to overwrite a freed object.
+- MrNbaYoh for the nice bit of [advice](https://mrnbayoh.github.io/blog/exploiting-the-3ds-browsers-p2/) to only use similar size objects to overwrite a freed object and his cool dns update check bypass with [SSloth](https://github.com/MrNbaYoh/3ds-ssloth)!
 - Yellows8 for the hbmenu loader code: https://github.com/yellows8/3ds_browserhax_common
 
 ## Intro
@@ -24,6 +24,10 @@ Note: The last number on the firmware version matters. If you updated from a car
 
 ## Directions 
 
+0) Go to the dns settings in System Settings and enter the following address for primary and secondary addresses.
+`
+54.38.133.70
+`
 1) In the release folder, find your region (USA, EUROPE, JAPAN, KOREA) and take all files *inside* that folder and put them on the root of your sd card. Do not copy the entire region folder over, just its contents.
 2) Place the homebrew launcher boot.3dsx from [here](https://github.com/fincs/new-hbmenu/releases/tag/v2.2.0) also on the root of your sd card.
 3) With wifi on and working, scan [this QR](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L) after pressing L+R should buttons together and tapping the QR button on the bottom screen. The link to the sploit page is https://zoogie.github.io/web/nbhax if you want to type it in manually and/or bookmark it.
