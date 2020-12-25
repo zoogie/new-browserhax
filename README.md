@@ -16,13 +16,14 @@ This is a new homebrew menu loading userland exploit for the new3ds browser, Ska
 
 A new3ds (or new2ds) on firmwares:<br>
 ```
-11.9.0-42 -> 11.13.0-45 for USA, JAPAN
-11.10.0-43 -> 11.13.0-45 for EUROPE
-11.9.0-36 -> 11.13.0-39 for KOREA
+11.9.0-42 -> 11.13.0-45 for USA, JAPAN (hbmenu and boot9strap)
+11.10.0-43 -> 11.13.0-45 for EUROPE (hbmenu and boot9strap)
+11.9.0-36 -> 11.13.0-39 for KOREA (hbmenu and boot9strap)
+11.4.0-37 -> 11.8.0-41 for USA, EUROPE, JAPAN (boot9strap only)
 ```
-Note: The last number on the firmware version matters. If you updated from a cartridge to your current firmware, you will need to update to latest firmware as your browser would have been erased by the cart update.
+Note: The last number on the firmware version matters. If you updated from a cartridge to your current firmware, you will need to update to latest firmware as your browser would have been erased by the cart update. If in doubt, just try the qr link below to see if your system is supported. PROCEED TO HAXX means it's supported, otherwise it's not.
 
-## Directions 
+## Directions (hbmenu 11.9 - 11.13 only)
 
 0) Go to the dns settings in System Settings and enter the following address for primary and secondary addresses.
 `
@@ -33,11 +34,15 @@ Note: The last number on the firmware version matters. If you updated from a car
 3) With wifi on and working, scan [this QR](http://api.qrserver.com/v1/create-qr-code/?color=000000&bgcolor=FFFFFF&data=https%3A%2F%2Fzoogie.github.io%2Fweb%2Fnbhax&qzone=1&margin=0&size=400x400&ecc=L) after pressing L+R should buttons together and tapping the QR button on the bottom screen. The link to the sploit page is https://zoogie.github.io/web/nbhax if you want to type it in manually and/or bookmark it.
 4) Click on the "PROCEED TO HAXX" button and the exploit should then load the homebrew menu. Make sure to add homebrews to the sdmc:/3ds folder first in order to have something to run. See other guides online about what you can do with homebrew.
 
+## Directions (boot9strap 11.4 - 11.13 only)
+
+https://3ds.hacks.guide (coming soon)
+
 ## Exploit details
 
 This is the same Use-After-Free bug exploited in the WiiU version, with some changes. The input.type="image" -> "radio" is changed to input.type="image" -> "hidden" in this one to achieve compatibility, for instance.
 
-## Troubleshooting
+## Troubleshooting (hbmenu only)
 
 - Problem: The 3ds freezes on a yellow screen.<br>
 Solution: Try again. Boot rate is about 75-80%. This has always been an issue with *hax homebrew and not specific to this implementation.* If this keeps occurring over and over, it's likely being caused by running browserhax while cfw (luma3ds + boot9strap) is already installed -- don't do this! Follow https://3ds.hacks.guide for proper instructions on how to launch .3dsx homebrew under cfw. Hard freezing with regular screens (ie no solid colored screen) can also indicate running under cfw.
@@ -68,5 +73,4 @@ Q: The 3ds_browserhax_common code you used works in php server code, why does yo
 A: I used a local webserver to emit the unescape output of y8's hb loading code, then converted it to a u32int array for my implementation. I used [this script](https://gist.github.com/zoogie/42adb5eab6b7f813f569f5250f7c800f) for the conversion. I just really wanted to avoid having to set up a server or asking someone else for that favor.
 
 Q: Will this exploit be fixed in a firmware update?<br>
-A: Don't know, but it's definitely possible. N has never fixed one of my exploits but they've always been proactive about fixing browser exploits. I give it 50/50 odds.
-
+A: It was fixed on firmware 11.14 but MrNbaYoh's ssloth exploit revived it on 11.13 and below with a server check bypass.
